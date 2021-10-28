@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hello\\source\\repos\\rav\\rav\\rav.csproj": {}
+    "C:\\Users\\hello\\source\\repos\\rav\\rev\\code\\rav\\rav.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hello\\source\\repos\\rav\\rav\\rav.csproj": {
+    "C:\\Users\\hello\\source\\repos\\rav\\rev\\code\\rav\\rav.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hello\\source\\repos\\rav\\rav\\rav.csproj",
+        "projectUniqueName": "C:\\Users\\hello\\source\\repos\\rav\\rev\\code\\rav\\rav.csproj",
         "projectName": "rav",
-        "projectPath": "C:\\Users\\hello\\source\\repos\\rav\\rav\\rav.csproj",
+        "projectPath": "C:\\Users\\hello\\source\\repos\\rav\\rev\\code\\rav\\rav.csproj",
         "packagesPath": "C:\\Users\\hello\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hello\\source\\repos\\rav\\rav\\obj\\",
+        "outputPath": "C:\\Users\\hello\\source\\repos\\rav\\rev\\code\\rav\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hello\\AppData\\Roaming\\NuGet\\NuGet.Config",

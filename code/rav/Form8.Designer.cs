@@ -1,7 +1,7 @@
 ﻿
 namespace rav
 {
-    partial class Form5
+    partial class Form8
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,13 @@ namespace rav
         {
             this.SuspendLayout();
             // 
-            // Form5
+            // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form5";
-            this.Text = "Usuarios";
+            this.Name = "Form8";
+            this.Text = "Reporte";
             this.ResumeLayout(false);
 
         }

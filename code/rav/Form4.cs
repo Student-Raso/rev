@@ -21,5 +21,10 @@ namespace rav
         {
             this.Text = "Resultados de la Aplicación: " + aplicSelec;
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

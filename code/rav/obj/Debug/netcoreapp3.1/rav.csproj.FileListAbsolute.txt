@@ -52,3 +52,4 @@ C:\Users\hello\source\repos\rav\rev\code\rav\obj\Debug\netcoreapp3.1\rav.Form15.
 C:\Users\hello\source\repos\rav\rev\code\rav\obj\Debug\netcoreapp3.1\rav.Form16.resources
 C:\Users\hello\source\repos\rav\rev\code\rav\obj\Debug\netcoreapp3.1\rav.Form17.resources
 C:\Users\hello\source\repos\rav\rev\code\rav\obj\Debug\netcoreapp3.1\rav.Form9.resources
+C:\Users\hello\source\repos\rav\rev\code\rav\bin\Debug\netcoreapp3.1\MySql.Data.dll

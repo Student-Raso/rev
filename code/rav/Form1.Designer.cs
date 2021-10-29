@@ -34,8 +34,13 @@ namespace rav
             this.aplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resultadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesPorUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesPorPruebaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesPorUsuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +62,7 @@ namespace rav
             this.aplicacionesToolStripMenuItem,
             this.pruebasToolStripMenuItem,
             this.usuariosToolStripMenuItem,
+            this.resultadoToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
@@ -83,6 +89,13 @@ namespace rav
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
+            // resultadoToolStripMenuItem
+            // 
+            this.resultadoToolStripMenuItem.Name = "resultadoToolStripMenuItem";
+            this.resultadoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.resultadoToolStripMenuItem.Text = "Trazabilidad";
+            this.resultadoToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -92,9 +105,40 @@ namespace rav
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportesPorUsuarioToolStripMenuItem,
+            this.reportesPorPruebaToolStripMenuItem,
+            this.reportesPorUsuarioToolStripMenuItem1,
+            this.salirToolStripMenuItem1});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // reportesPorUsuarioToolStripMenuItem
+            // 
+            this.reportesPorUsuarioToolStripMenuItem.Name = "reportesPorUsuarioToolStripMenuItem";
+            this.reportesPorUsuarioToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.reportesPorUsuarioToolStripMenuItem.Text = "Resultados";
+            this.reportesPorUsuarioToolStripMenuItem.Click += new System.EventHandler(this.reportesPorUsuarioToolStripMenuItem_Click);
+            // 
+            // reportesPorPruebaToolStripMenuItem
+            // 
+            this.reportesPorPruebaToolStripMenuItem.Name = "reportesPorPruebaToolStripMenuItem";
+            this.reportesPorPruebaToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.reportesPorPruebaToolStripMenuItem.Text = "Reportes por Prueba";
+            // 
+            // reportesPorUsuarioToolStripMenuItem1
+            // 
+            this.reportesPorUsuarioToolStripMenuItem1.Name = "reportesPorUsuarioToolStripMenuItem1";
+            this.reportesPorUsuarioToolStripMenuItem1.Size = new System.Drawing.Size(266, 26);
+            this.reportesPorUsuarioToolStripMenuItem1.Text = "Reportes por Usuario";
+            // 
+            // salirToolStripMenuItem1
+            // 
+            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
+            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(266, 26);
+            this.salirToolStripMenuItem1.Text = "Salir";
+            this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -124,6 +168,11 @@ namespace rav
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesPorUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesPorPruebaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesPorUsuarioToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem resultadoToolStripMenuItem;
     }
 }
 

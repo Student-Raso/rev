@@ -17,6 +17,10 @@ namespace rav
             aplicSelec = aplic;
         }
 
+        public Form4()
+        {
+        }
+
         private void Form4_Load(object sender, EventArgs e)
         {
             this.Text = "Resultados de la Aplicación: " + aplicSelec;

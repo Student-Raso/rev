@@ -45,5 +45,21 @@ namespace rav
             Form6 f6 = new Form6();
             f6.Show();
         }
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form7 f7 = new Form7();
+            f7.Show();
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void reportesPorUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form8 f8 = new Form8();
+            f8.Show();
+        }
     }
 }

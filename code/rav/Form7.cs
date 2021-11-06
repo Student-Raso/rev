@@ -84,22 +84,21 @@ namespace rav
         }
 
         string responsable, aplicador;
-        string prueba, folio, aplicada, firma, version;
+        string idres, idapl, prueba, nombrePrueba, folio, aplicada, firma, version;
         string archivo = @"C:\Users\hello\source\repos\rav\rev\code\rav\bin\Debug\Traza.htm";
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             obtAplicacion(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+            obtUsuario(idres, idapl);
+            obtPrueba(prueba);
             StreamWriter arch = new StreamWriter(archivo);
-            arch.WriteLine("<html> Trazabilidad del resultado " 
-                + dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + ":<br>");
+            arch.WriteLine("<html><meta content=\"text/html;charset=UTF-8\">Trazabilidad del resultado"
+                      + dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() + ":<br>");
             arch.WriteLine(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "<br>");
             arch.WriteLine("<br> ID_APLICACION: " + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + "<br>");
-            arch.WriteLine("RESPONSABLE::: "+ dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() 
-                + " Luis González<br>");
-            arch.WriteLine(@"ID_PRUEBA::::: " + prueba
-                + @"C:\Users\User\Documents\UTH\2021c\2Integración Analista v1.0.docx<br>");
-            arch.WriteLine("APLICADOR::::: "+ dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString() 
-                + " Juan Pérez<br>");
+            arch.WriteLine("RESPONSABLE::: " + idres + " - " + responsable + "<br>");
+            arch.WriteLine(@"ID_PRUEBA::::: " + prueba + " - " + nombrePrueba + "<br>");
+            arch.WriteLine("APLICADOR::::: " + idapl + " - " + aplicador + "<br>");
             arch.WriteLine("FOLIO::::::::: "+ folio + "<br>");
             arch.WriteLine("APLICADA:::::: "+ aplicada + " <br>");
             arch.WriteLine("FIRMA::::::::: " + firma + "<br>");
@@ -124,7 +123,9 @@ namespace rav
                 if (reader.HasRows)
                 {
                     reader.Read();
+                    idres = reader.GetString(1);
                     prueba = reader.GetString(2);
+                    idapl = reader.GetString(3);
                     folio = reader.GetString(4);
                     aplicada = reader.GetString(5);
                     firma = reader.GetString(6);
@@ -155,7 +156,7 @@ namespace rav
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    prueba = reader.GetString(2);
+                    nombrePrueba = reader.GetString(1);
                 }
                 else
                 {
@@ -171,7 +172,7 @@ namespace rav
         private void obtUsuario(string r, string a)
         { //Buscar
             string connectionString = "datasource=localhost;port=3306;username=root;password=123456;database=repositorio;";
-            string query = "Select * from aplicaciones where ID_APLICACION=" + a;
+            string query = "SELECT * FROM usuarios WHERE ID_USUARIO IN(" + r + "," + a + ")";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             MySqlDataReader reader;
@@ -182,11 +183,9 @@ namespace rav
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    prueba = reader.GetString(2);
-                    folio = reader.GetString(4);
-                    aplicada = reader.GetString(5);
-                    firma = reader.GetString(6);
-                    version = reader.GetString(7);
+                    responsable = reader.GetString(1);
+                    reader.Read();
+                    aplicador = reader.GetString(1);
                 }
                 else
                 {

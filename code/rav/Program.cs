@@ -17,7 +17,7 @@ namespace rav
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form7());
+            Application.Run(new Form1());
         }
     }
 }

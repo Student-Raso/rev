@@ -141,15 +141,14 @@ namespace rav
         private void button4_Click(object sender, EventArgs e)
         {//Modificar
             string connectionString = "datasource=localhost;port=3306;username=root;password=123456;database=repositorio;";
-            string query = "update aplicaciones set RESPONSABLE='"
-                + textBox3.Text.Trim() + "', ID_PRUEBA='"
-                + textBox4.Text.Trim() + "', APLICADOR='"
-                + textBox5.Text.Trim() + "', FOLIO='"
-                + textBox6.Text.Trim() + "', APLICADA='"
-                + textBox7.Text.Substring(6, 4) + textBox7.Text.Substring(3, 2) + textBox7.Text.Substring(0, 2)
+            string query = "update aplicaciones set RESPONSABLE='" + textBox3.Text.Trim() 
+                + "', ID_PRUEBA='"+ textBox4.Text.Trim() 
+                + "', APLICADOR='"+ textBox5.Text.Trim() 
+                + "', FOLIO='" + textBox6.Text.Trim() 
+                + "', APLICADA='" + textBox7.Text.Substring(6, 4) + textBox7.Text.Substring(3, 2) + textBox7.Text.Substring(0, 2)
                 + textBox7.Text.Substring(11, 2) + textBox7.Text.Substring(14, 2) + textBox7.Text.Substring(17, 2)
-                + "', FIRMA='" + textBox8.Text.Trim()
-                + "', VERSION='" + textBox9.Text.Trim()
+                + "', FIRMA='" + textBox8.Text.Trim() 
+                + "', VERSION='" + textBox9.Text.Trim() 
                 + "' where ID_APLICACION=" + textBox2.Text;
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);

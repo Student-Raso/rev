@@ -128,9 +128,9 @@ namespace rav
                 + "', DESCRIPCION='"+ textBox4.Text.Trim() 
                 + "', TIPODEPRUEBA='" + textBox5.Text.Trim() 
                 + "', MODULO='" + textBox6.Text.Trim() 
-                + "', APLICADA='" + textBox7.Text.Trim()
+                + "', ELABORA='" + textBox7.Text.Trim()
                 + "', AUTORIZA='" + textBox8.Text.Trim()
-                + "', AUTORIZADA='" 
+                + "', AUROTIZADA='"
                 + textBox9.Text.Substring(6, 4) + textBox9.Text.Substring(3, 2) + textBox9.Text.Substring(0, 2)
                 + textBox9.Text.Substring(11, 2) + textBox9.Text.Substring(14, 2) + textBox9.Text.Substring(17, 2)
                 + "', REQUISITOS='" + textBox10.Text.Trim()

@@ -61,5 +61,41 @@ namespace rav
             Form8 f8 = new Form8();
             f8.Show();
         }
+
+        private void aplicacionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form9 f9 = new Form9();
+            f9.Show();
+        }
+
+        private void pruebasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form10 f10 = new Form10();
+            f10.Show();
+        }
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form11 f11 = new Form11();
+            f11.Show();
+        }
+
+        private void resultadosPorAplicacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form12 f12 = new Form12();
+            f12.Show();
+        }
+
+        private void resultadosPorPruebasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form13 f13 = new Form13();
+            f13.Show();
+        }
+
+        private void resultadoPorUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form14 f14 = new Form14();
+            f14.Show();
+        }
     }
 }

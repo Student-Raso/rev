@@ -75,6 +75,7 @@ namespace rav
             this.button1.TabIndex = 17;
             this.button1.Text = "Generar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -89,13 +90,13 @@ namespace rav
             // 
             this.textBox1.Location = new System.Drawing.Point(76, 47);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.Size = new System.Drawing.Size(300, 27);
             this.textBox1.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 50);
+            this.label2.Location = new System.Drawing.Point(382, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 21;
@@ -103,9 +104,9 @@ namespace rav
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(272, 47);
+            this.textBox2.Location = new System.Drawing.Point(442, 47);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
+            this.textBox2.Size = new System.Drawing.Size(328, 27);
             this.textBox2.TabIndex = 22;
             // 
             // Form17

@@ -10,14 +10,14 @@ using MySql.Data.MySqlClient;
 
 namespace rav
 {
-    public partial class Form16 : Form
+    public partial class Form22 : Form
     {
-        public Form16()
+        public Form22()
         {
             InitializeComponent();
         }
         WebBrowser webBrowser1 = new WebBrowser();
-        private void Form16_Load(object sender, EventArgs e)
+        private void Form22_Load(object sender, EventArgs e)
         {
             webBrowser1.Left = 12;
             webBrowser1.Top = 53;
@@ -33,19 +33,18 @@ namespace rav
             this.Controls.Add(this.webBrowser1);
             button1_Click(sender, e);
         }
-        string archivo = Directory.GetCurrentDirectory() + "\\ReporteAplicacioensPorPrueba.htm";
-
+        string archivo = Directory.GetCurrentDirectory() + "\\SumarioDeResultadosPorUsuario.htm";
         private void button1_Click(object sender, EventArgs e)
         {//Generar
             int total = 0;
             StreamWriter arch = new StreamWriter(archivo);
-            arch.WriteLine("<html>REPORTE APLICACIONES POR USUARIO<br>Fecha: "
-                + System.DateTime.Now.ToString() + "<br><br>");
+            arch.WriteLine("<html>SUMARIO DE RESULTADOS POR USUARIO<br>Fecha: " + System.DateTime.Now.ToString() + "<br><br>");
             arch.WriteLine("<table border=1 cellspacing=0>");
-            arch.WriteLine("<tr><td>ID_USUARIO</td><td>USUARIO</td><td>TOTAL</td></tr>");
+            arch.WriteLine("<tr><td>ID_RESULTADO</td><td>RESULTADO</td><td>ID_APLICACION</td><td>DATO</td><td>ESPERANDO</td>" +
+                "<td>ENTREGADA</td><td>RECIBIDO</td><td>ESTADO</td><td>ID_USUARIO</td><td>USUARIO</td><td>CUENTA</td>" +
+                "<td>CLAVE</td><td>ROL</td></tr>");
             string connectionString = "datasource=localhost;port=3306;username=root;password=123456;database=repositorio;";
-            string query = "SELECT USUARIOS.ID_USUARIO, USUARIO, COUNT(ID_APLICACION) TOTAL FROM USUARIOS " +
-                "LEFT JOIN APLICACIONES ON APLICACIONES.RESPONSABLE=USUARIOS.ID_USUARIO GROUP BY USUARIOS.ID_USUARIO";
+            string query = "select*from resultados, usuarios WHERE resultados.id_resultado=usuarios.id_usuario";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             MySqlDataReader reader;
@@ -55,10 +54,15 @@ namespace rav
                 reader = commandDatabase.ExecuteReader();
                 if (reader.HasRows)
                 {
-                    while (reader.Read())
+                    while (reader.Read())//13
                     {
                         arch.WriteLine("<tr><td>" + reader.GetString(0) + "</td><td>" + reader.GetString(1)
-                                    + "</td><td>" + reader.GetString(2) + "</td></tr>");
+                                    + "</td><td>" + reader.GetString(2) + "</td><td>" + reader.GetString(3)
+                                    + "</td><td>" + reader.GetString(4) + "</td><td>" + reader.GetString(5)
+                                    + "</td><td>" + reader.GetString(6) + "</td><td>" + reader.GetString(7)
+                                    + "</td><td>" + reader.GetString(8) + "</td><td>" + reader.GetString(9)
+                                    + "</td><td>" + reader.GetString(10) + "</td><td>" + reader.GetString(11)
+                                    + "</td><td>" + reader.GetString(12) + "</td></tr>");
                         total++;
                     }
                 }

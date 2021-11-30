@@ -97,5 +97,65 @@ namespace rav
             Form14 f14 = new Form14();
             f14.Show();
         }
+
+        private void aplicacionesPorPruebaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form15 f15 = new Form15();
+            f15.Show();
+        }
+
+        private void aplicacionesPorUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form16 f16 = new Form16();
+            f16.Show();
+        }
+
+        private void pruebasPorPeriodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form17 f17 = new Form17();
+            f17.Show();
+        }
+
+        private void aplicacionesPorPeriodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form18 f18 = new Form18();
+            f18.Show();
+        }
+
+        private void resultadosPorPeriodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form19 f19 = new Form19();
+            f19.Show();
+        }
+
+        private void sumarioDeResultadosPorAplicaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form20 f20 = new Form20();
+            f20.Show();
+        }
+
+        private void sumarioDeResultadosPorPruebaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form21 f21 = new Form21();
+            f21.Show();
+        }
+
+        private void sumarioDeResultadosPorUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form22 f22 = new Form22();
+            f22.Show();
+        }
+
+        private void sumarioDeAplicacionesPorPruebaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form23 f23 = new Form23();
+            f23.Show();
+        }
+
+        private void sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form24 f24 = new Form24();
+            f24.Show();
+        }
     }
 }

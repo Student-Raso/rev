@@ -26,7 +26,8 @@ namespace rav
             webBrowser1.ScrollBarsEnabled = true;
             webBrowser1.Visible = true;
             webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top 
+                | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
                 | System.Windows.Forms.AnchorStyles.Right)));
             this.Controls.Add(this.webBrowser1);
@@ -42,8 +43,10 @@ namespace rav
             arch.WriteLine("<table border=1 cellspacing=0>");
             arch.WriteLine("<tr><td>ID_PRUEBA</td><td>PRUEBA</td><td>TOTAL</td></tr>");
             string connectionString = "datasource=localhost;port=3306;username=root;password=123456;database=repositorio;";
-            string query = "SELECT PRUEBAS.ID_PRUEBA, PRUEBA, COUNT(ID_APLICACION) TOTAL FROM PRUEBAS " +
-                "LEFT JOIN APLICACIONES ON APLICACIONES.ID_PRUEBA=PRUEBAS.ID_PRUEBA GROUP BY PRUEBAS.ID_PRUEBA;";
+            string query = "SELECT PRUEBAS.ID_PRUEBA, PRUEBA, IF(ISNULL(TOTAL), '0', TOTAL) TOTAL FROM PRUEBAS " 
+                +  "LEFT JOIN (SELECT ID_PRUEBA, APLICADA, VERSION, COUNT(ID_RESULTADO) AS TOTAL FROM APLICACIONES, " 
+                +  "RESULTADOS WHERE APLICACIONES.ID_APLICACION=RESULTADOS.ID_APLICACION GROUP BY APLICACIONES.ID_PRUEBA) " 
+                +  "T ON T.ID_PRUEBA=PRUEBAS.ID_PRUEBA";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             MySqlDataReader reader;

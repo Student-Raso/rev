@@ -84,5 +84,22 @@ namespace rav
             Uri dir = new Uri(archivo);
             webBrowser1.Url = dir;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Program Files\Microsoft Office\root\Office16\excel",
+                "\"" + archivo + "\"");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome",
+                "\"" + archivo + "\"");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

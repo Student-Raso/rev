@@ -31,7 +31,28 @@
     <Compile Update="Form17.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form19.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form23.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form24.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form3.cs">

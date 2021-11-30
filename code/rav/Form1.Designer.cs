@@ -194,60 +194,70 @@ namespace rav
             this.aplicacionesPorPruebaToolStripMenuItem.Name = "aplicacionesPorPruebaToolStripMenuItem";
             this.aplicacionesPorPruebaToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.aplicacionesPorPruebaToolStripMenuItem.Text = "Aplicaciones por Prueba";
+            this.aplicacionesPorPruebaToolStripMenuItem.Click += new System.EventHandler(this.aplicacionesPorPruebaToolStripMenuItem_Click);
             // 
             // aplicacionesPorUsuarioToolStripMenuItem
             // 
             this.aplicacionesPorUsuarioToolStripMenuItem.Name = "aplicacionesPorUsuarioToolStripMenuItem";
             this.aplicacionesPorUsuarioToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.aplicacionesPorUsuarioToolStripMenuItem.Text = "Aplicaciones por Usuario";
+            this.aplicacionesPorUsuarioToolStripMenuItem.Click += new System.EventHandler(this.aplicacionesPorUsuarioToolStripMenuItem_Click);
             // 
             // pruebasPorPeriodoToolStripMenuItem
             // 
             this.pruebasPorPeriodoToolStripMenuItem.Name = "pruebasPorPeriodoToolStripMenuItem";
             this.pruebasPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.pruebasPorPeriodoToolStripMenuItem.Text = "Pruebas por Periodo";
+            this.pruebasPorPeriodoToolStripMenuItem.Click += new System.EventHandler(this.pruebasPorPeriodoToolStripMenuItem_Click);
             // 
             // aplicacionesPorPeriodoToolStripMenuItem
             // 
             this.aplicacionesPorPeriodoToolStripMenuItem.Name = "aplicacionesPorPeriodoToolStripMenuItem";
             this.aplicacionesPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.aplicacionesPorPeriodoToolStripMenuItem.Text = "Aplicaciones por Periodo";
+            this.aplicacionesPorPeriodoToolStripMenuItem.Click += new System.EventHandler(this.aplicacionesPorPeriodoToolStripMenuItem_Click);
             // 
             // resultadosPorPeriodoToolStripMenuItem
             // 
             this.resultadosPorPeriodoToolStripMenuItem.Name = "resultadosPorPeriodoToolStripMenuItem";
             this.resultadosPorPeriodoToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.resultadosPorPeriodoToolStripMenuItem.Text = "Resultados por Periodo";
+            this.resultadosPorPeriodoToolStripMenuItem.Click += new System.EventHandler(this.resultadosPorPeriodoToolStripMenuItem_Click);
             // 
             // sumarioDeResultadosPorAplicaciónToolStripMenuItem
             // 
             this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Name = "sumarioDeResultadosPorAplicaciónToolStripMenuItem";
             this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Text = "Sumario de Resultados por Aplicación";
+            this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Click += new System.EventHandler(this.sumarioDeResultadosPorAplicaciónToolStripMenuItem_Click);
             // 
             // sumarioDeResultadosPorPruebaToolStripMenuItem
             // 
             this.sumarioDeResultadosPorPruebaToolStripMenuItem.Name = "sumarioDeResultadosPorPruebaToolStripMenuItem";
             this.sumarioDeResultadosPorPruebaToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.sumarioDeResultadosPorPruebaToolStripMenuItem.Text = "Sumario de Resultados por Prueba";
+            this.sumarioDeResultadosPorPruebaToolStripMenuItem.Click += new System.EventHandler(this.sumarioDeResultadosPorPruebaToolStripMenuItem_Click);
             // 
             // sumarioDeResultadosPorUsuarioToolStripMenuItem
             // 
             this.sumarioDeResultadosPorUsuarioToolStripMenuItem.Name = "sumarioDeResultadosPorUsuarioToolStripMenuItem";
             this.sumarioDeResultadosPorUsuarioToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.sumarioDeResultadosPorUsuarioToolStripMenuItem.Text = "Sumario de Resultados por Usuario";
+            this.sumarioDeResultadosPorUsuarioToolStripMenuItem.Click += new System.EventHandler(this.sumarioDeResultadosPorUsuarioToolStripMenuItem_Click);
             // 
             // sumarioDeAplicacionesPorPruebaToolStripMenuItem
             // 
             this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Name = "sumarioDeAplicacionesPorPruebaToolStripMenuItem";
             this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Text = "Sumario de Aplicaciones por Prueba";
+            this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Click += new System.EventHandler(this.sumarioDeAplicacionesPorPruebaToolStripMenuItem_Click);
             // 
             // sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem
             // 
             this.sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem.Name = "sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem";
             this.sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem.Text = "Sumario de Aplicaciones por Trazabilidad";
+            this.sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem.Click += new System.EventHandler(this.sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem_Click);
             // 
             // Form1
             // 

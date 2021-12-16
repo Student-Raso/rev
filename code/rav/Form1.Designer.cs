@@ -228,7 +228,7 @@ namespace rav
             // 
             this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Name = "sumarioDeResultadosPorAplicaciónToolStripMenuItem";
             this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
-            this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Text = "Sumario de Resultados por Aplicación";
+            this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Text = "Sumario de Aplicaciones por Prueba";
             this.sumarioDeResultadosPorAplicaciónToolStripMenuItem.Click += new System.EventHandler(this.sumarioDeResultadosPorAplicaciónToolStripMenuItem_Click);
             // 
             // sumarioDeResultadosPorPruebaToolStripMenuItem
@@ -249,7 +249,7 @@ namespace rav
             // 
             this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Name = "sumarioDeAplicacionesPorPruebaToolStripMenuItem";
             this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
-            this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Text = "Sumario de Aplicaciones por Prueba";
+            this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Text = "Sumario de Resultados por Aplicación";
             this.sumarioDeAplicacionesPorPruebaToolStripMenuItem.Click += new System.EventHandler(this.sumarioDeAplicacionesPorPruebaToolStripMenuItem_Click);
             // 
             // sumarioDeAplicacionesPorTrazabilidadToolStripMenuItem

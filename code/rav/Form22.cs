@@ -38,13 +38,14 @@ namespace rav
         {//Generar
             int total = 0;
             StreamWriter arch = new StreamWriter(archivo);
-            arch.WriteLine("<html>SUMARIO DE RESULTADOS POR USUARIO<br>Fecha: " + System.DateTime.Now.ToString() + "<br><br>");
+            arch.WriteLine("<html><meta charset=\"UTF-8\">SUMARIO DE RESULTADOS POR USUARIO<br>Fecha: " + System.DateTime.Now.ToString() + "<br><br>");
             arch.WriteLine("<table border=1 cellspacing=0>");
             arch.WriteLine("<tr><td>ID_RESULTADO</td><td>RESULTADO</td><td>ID_APLICACION</td><td>DATO</td><td>ESPERANDO</td>" +
                 "<td>ENTREGADA</td><td>RECIBIDO</td><td>ESTADO</td><td>ID_USUARIO</td><td>USUARIO</td><td>CUENTA</td>" +
                 "<td>CLAVE</td><td>ROL</td></tr>");
             string connectionString = "datasource=localhost;port=3306;username=root;password=123456;database=repositorio;";
-            string query = "select*from resultados, usuarios WHERE resultados.id_resultado=usuarios.id_usuario";
+            string query = "select*from resultados, usuarios WHERE resultados.id_resultado=usuarios.id_usuario" +
+                " ORDER BY resultados.id_resultado, usuarios.id_usuario";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             MySqlDataReader reader;
@@ -54,15 +55,24 @@ namespace rav
                 reader = commandDatabase.ExecuteReader();
                 if (reader.HasRows)
                 {
+                    string anterior = ""; 
                     while (reader.Read())//13
                     {
-                        arch.WriteLine("<tr><td>" + reader.GetString(0) + "</td><td>" + reader.GetString(1)
-                                    + "</td><td>" + reader.GetString(2) + "</td><td>" + reader.GetString(3)
-                                    + "</td><td>" + reader.GetString(4) + "</td><td>" + reader.GetString(5)
-                                    + "</td><td>" + reader.GetString(6) + "</td><td>" + reader.GetString(7)
-                                    + "</td><td>" + reader.GetString(8) + "</td><td>" + reader.GetString(9)
-                                    + "</td><td>" + reader.GetString(10) + "</td><td>" + reader.GetString(11)
-                                    + "</td><td>" + reader.GetString(12) + "</td></tr>");
+                        arch.WriteLine("<tr><td>" + ((anterior == reader.GetString(0)) ? " " : reader.GetString(0))
+                                    + "</td><td>" + ((anterior == reader.GetString(0)) ? " " : reader.GetString(1))
+                                    + "</td><td>" + ((anterior == reader.GetString(0)) ? " " : reader.GetString(2))
+                                    + "</td><td>" + ((anterior == reader.GetString(0)) ? " " : reader.GetString(3))
+                                    + "</td><td>" + ((anterior == reader.GetString(0)) ? " " : reader.GetString(4))
+                                    + "</td><td>" + ((anterior == reader.GetString(0)) ? " " : reader.GetString(5))
+                                    + "</td><td>" + ((anterior == reader.GetString(0)) ? " " : reader.GetString(6))
+                                    + "</td><td>" + reader.GetString(7)
+                                    + "</td><td>" + reader.GetString(8) 
+                                    + "</td><td>" + reader.GetString(9)
+                                    + "</td><td>" + reader.GetString(10) 
+                                    + "</td><td>" + reader.GetString(11)
+                                    + "</td><td>" + reader.GetString(12) 
+                                    + "</td></tr>");
+                        anterior = reader.GetString(0); 
                         total++;
                     }
                 }

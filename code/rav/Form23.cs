@@ -38,7 +38,7 @@ namespace rav
         {//Generar
             int total = 0;
             StreamWriter arch = new StreamWriter(archivo);
-            arch.WriteLine("<html>SUMARIO DE RESULTADOS POR PRUEBA<br>Fecha: " + System.DateTime.Now.ToString() + "<br><br>");
+            arch.WriteLine("<html><meta charset=\"UTF-8\">SUMARIO DE RESULTADOS POR APLICACION<br>Fecha: " + System.DateTime.Now.ToString() + "<br><br>");
             arch.WriteLine("<table border=1 cellspacing=0>");
             arch.WriteLine("<tr><td>ID_APLICACION</td><td>RESPONSABLE</td><td>ID_PRUEBA</td><td>APLICADOR</td><td>FOLIO</td><td>APLICADA</td>"
                 + "<td>FIRMA</td><td>VERSION</td><td>ID_PRUEBA</td><td>PRUEBA</td><td>DESCRIPCION</td><td>TIPODEPRUEBA</td>"
@@ -54,17 +54,28 @@ namespace rav
                 reader = commandDatabase.ExecuteReader();
                 if (reader.HasRows)
                 {
+                    string anterior = ""; 
                     while (reader.Read())//17
                     {
-                        arch.WriteLine("<tr><td>" + reader.GetString(0) + "</td><td>" + reader.GetString(1)
-                                    + "</td><td>" + reader.GetString(2) + "</td><td>" + reader.GetString(3)
-                                    + "</td><td>" + reader.GetString(4) + "</td><td>" + reader.GetString(5)
-                                    + "</td><td>" + reader.GetString(6) + "</td><td>" + reader.GetString(7)
-                                    + "</td><td>" + reader.GetString(8) + "</td><td>" + reader.GetString(9)
-                                    + "</td><td>" + reader.GetString(10) + "</td><td>" + reader.GetString(11)
-                                    + "</td><td>" + reader.GetString(12) + "</td><td>" + reader.GetString(13)
-                                    + "</td><td>" + reader.GetString(14) + "</td><td>" + reader.GetString(15)
-                                    + "</td><td>" + reader.GetString(16) + "</td></tr>");
+                        arch.WriteLine("<tr><td>" + reader.GetString(0) 
+                                    + "</td><td>" + reader.GetString(1)
+                                    + "</td><td>" + reader.GetString(2) 
+                                    + "</td><td>" + reader.GetString(3)
+                                    + "</td><td>" + reader.GetString(4) 
+                                    + "</td><td>" + reader.GetString(5)
+                                    + "</td><td>" + reader.GetString(6) 
+                                    + "</td><td>" + reader.GetString(7)
+                                    + "</td><td>" + reader.GetString(8) 
+                                    + "</td><td>" + reader.GetString(9)
+                                    + "</td><td>" + reader.GetString(10) 
+                                    + "</td><td>" + reader.GetString(11)
+                                    + "</td><td>" + reader.GetString(12) 
+                                    + "</td><td>" + reader.GetString(13)
+                                    + "</td><td>" + reader.GetString(14) 
+                                    + "</td><td>" + reader.GetString(15)
+                                    + "</td><td>" + reader.GetString(16) 
+                                    + "</td></tr>");
+                        anterior = reader.GetString(0); 
                         total++;
                     }
                 }

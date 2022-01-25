@@ -1,0 +1,12 @@
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.csproj.AssemblyReference.cache
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.Form1.resources
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.Properties.Resources.resources
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.csproj.GenerateResource.cache
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.csproj.CoreCompileInputs.cache
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\bin\Debug\ravnewframework.exe.config
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\bin\Debug\ravnewframework.exe
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\bin\Debug\ravnewframework.pdb
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.exe
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.pdb
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.Form2.resources
+C:\Users\hello\source\repos\ravnew\ravnewframework\ravnewframework\obj\Debug\ravnewframework.Form3.resources
